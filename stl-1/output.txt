@@ -1,4 +1,2 @@
-manik 4
-bablu 5
-anik 12
-ncie 4 okey
+3
+4 6 6 
