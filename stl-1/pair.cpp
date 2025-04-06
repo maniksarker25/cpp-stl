@@ -30,6 +30,12 @@ int main()
     }
 
 
+    // for multipe 
+    pair<string,pair<int,string>> p = {"ncie",{4,"okey"}};
+
+    cout << p.first << ' ' << p.second.first << ' ' << p.second.second << endl;
+
+
 
     return 0;
 }
