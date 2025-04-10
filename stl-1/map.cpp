@@ -51,8 +51,20 @@ int main()
     // cout << mp[99] << endl; // if not found then it add one key, value in map {99,0} and return 0
 
 
-    
+    // erase------------------
 
+    // mp.erase(6);
+
+    auto it = mp.find(6);
+    if(it != mp.end()){
+        mp.erase(it);
+    }
+
+    // print again---
+    for(auto it : mp){
+        int key = it.first, value = it.second;
+        cout << key << ' ' << value << endl;
+    }
 
 
     return 0;
