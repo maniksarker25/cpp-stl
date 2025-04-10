@@ -55,16 +55,35 @@ int main()
 
     // mp.erase(6);
 
-    auto it = mp.find(6);
-    if(it != mp.end()){
-        mp.erase(it);
-    }
+    // auto it = mp.find(6);
+    // if(it != mp.end()){
+    //     mp.erase(it);
+    // }
 
     // print again---
-    for(auto it : mp){
-        int key = it.first, value = it.second;
-        cout << key << ' ' << value << endl;
-    }
+    // for(auto it : mp){
+    //     int key = it.first, value = it.second;
+    //     cout << key << ' ' << value << endl;
+    // }
+
+
+    // 
+    // cout << mp.size() << endl; // find size 
+    // cout << mp.empty() << endl;  // if not empty return 0 
+    // mp.clear();
+
+    // 
+    // auto it = mp.begin(); // first iterator
+    // it++; // can increase , decrasse itirator
+    // cout << it->first << ' '<< it->second <<endl;
+
+    // lower bound , upper bound------------
+    // auto it = mp.lower_bound(23); // return equal or greater--------
+    // cout << it->first << ' ' << it->second << endl;
+
+    // upper bound 
+    auto it = mp.upper_bound(6); // return always greater --------
+    cout << it->first << ' ' << it->second << endl;
 
 
     return 0;
