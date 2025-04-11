@@ -1,2 +1,3 @@
-Not Found
+lower bound => 4
 upper bound => 9
+2 2 4 6 9 9 9 9 

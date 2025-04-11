@@ -1,4 +1,5 @@
-// learn about set -------------------
+// multi set ------------
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -6,23 +7,20 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
+    // multi set sorted but  alowed duplicate and most of the thing is same as set ------
     
     int n;
     cin >> n;
-    set<int>s;
+    multiset<int>s;
     for(int i = 0;i<n;i++){
         int x;
         cin >>x;
         s.insert(x);
     }
 
-    // access / print -------
-    // auto it = s.begin();
-    // it++;
-    // cout << *it << endl;
-
-    // print using range based for loop----
-    // for(auto value : s){
+    // print -------------
+    // for(auto value :s){
     //     cout << value << ' ';
     // }
 
@@ -37,16 +35,25 @@ int main()
     // }
 
     // erase ---------------------------
-    // s.erase(6);
+    //  s.erase(9); 0(logN +K)  // in multi set if i use erase it delete all value what i want to delete
+
+    // if i want to erase spacific one -------------
+    // auto it = s.find(9);
+    // s.erase(it);
+    // 0(2logN)
 
 
-    // count -------------------
+    // count --------------------
+    // 0(logN) // if single
+    // 0(logN +K) // if have multiple time that element
+    // cout << s.count(9) <<endl; // return how many time apear , if not have return 0
 
-    // cout << s.count(6); // if have return 1 if not have return 0
 
+
+    // lower bound and upper bound same as set ---------------
     // lower bound ------------------------
 
-   auto it = s.lower_bound(20); // return equal or greater itirator---------
+   auto it = s.lower_bound(3); // return equal or greater itirator---------
    if(it == s.end()){
     cout << "Not Found" << endl;
    }
@@ -67,10 +74,15 @@ int main()
 
 
 
-    // print
-    // for(auto value : s){
-    //     cout << value << ' ';
-    // }
+
+
+
+    // print -------------
+    for(auto value :s){
+        cout << value << ' ';
+    }
+
+
     
     return 0;
 }
