@@ -1,3 +1,9 @@
-lower bound => 4
-upper bound => 9
-2 2 4 6 9 9 9 9 
+5
+size => 4
+0
+
+1
+size => 1
+1
+prority queue
+5 3 2 1 
