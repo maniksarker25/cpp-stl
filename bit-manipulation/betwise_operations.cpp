@@ -20,9 +20,22 @@ void print_on_and_off_bits(int n){
     }
 }
 
-
+// turn on kth bit
 int turn_on_kth_bit(int n , int k){
     return (n | (1 <<k));
+}
+
+
+// turn on kth bit
+int turn_off_kth_bit(int n,int k){
+    return (n & (~(1 << k)));
+}
+
+
+// toggle kth bit 
+
+int toggle_kth_bit(int n , int k){
+    return (n ^ (1 << k));
 }
 
 int main()
@@ -37,8 +50,13 @@ int main()
     // print_on_and_off_bits(45);
 
     // turn on kth bit
-    cout << turn_on_kth_bit(45,4) << endl;
+    // cout << turn_on_kth_bit(45,4) << endl;
 
+    // turn off kth
+    // cout << turn_off_kth_bit(45,3) <<endl;
+
+    // toggle kth bit
+    cout << toggle_kth_bit(45,4) <<endl;
     
     return 0;
 }
