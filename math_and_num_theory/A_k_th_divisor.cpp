@@ -22,7 +22,7 @@ int main()
         cout << -1 << endl;
     }
     else{
-        cout << divisors[k-1] << endl;
+        cout << divisors[k-1] << '\n';
     }
     
     return 0;
